@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image hover</title>
+    <link rel="stylesheet" href="magnify-image-hover/hoverimg/css/jquery.jqZoom.css">
+
+</head>
+
+<body>
+    <div class="zoom-box">
+        <img src="https://imgd.aeplcdn.com/1056x594/cw/ec/26592/Land-Rover-Range-Rover-Exterior-130450.jpg?wm=1&q=85"
+            width="300" height="180" style="border: 1px solid black;" />
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/magnify-image-hover/hoverimg/js/jquery.jqZoom.js"></script>
+    <script>
+        $(function () {
+            $("img").jqZoom({
+                selectorWidth: 30,
+                selectorHeight: 30,
+                viewerWidth: 400,
+                viewerHeight: 300
+            });
+        })
+    </script>
+</body>
+
+</html>

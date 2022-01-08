@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        
+        #div1{
+            background-color: thistle;
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+        }
+        button{
+            margin-top: 10px;
+        }
+        #d1{
+            height: 100px;
+            border: 2px solid black;
+            border-radius: 50px;
+            width: 20px;
+            margin-top: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+  
+    <button id="btn1">Button 1</button>
+    <button id="btn2">Button 2</button>
+    <div id="div1"></div>
+
+    <script>
+    //    $('#btn1').click(function(){
+    //        $('#div1').hide(2000);  // we paas time parameter in hide function
+    //                               // for how much time you want to apply effect
+    //    });
+    //    $('#btn2').click(function(){
+    //        $('#div1').show(1000)
+    //    })
+
+
+
+  
+    // fadeTo() isme 2 parameter paas honge ek me millisec or dusre me kitna fade rakhna hai 0.5
+    // fadeIn and fadeOut
+    // ye effect hide and show ki tarah he hai bas isme fade se hide hota hai
+    
+        // $('#btn1').click(function(){
+        //     $('#div1').fadeOut(1000)
+        // });
+        // $('#btn2').click(function(){
+        //     $('#div1').fadeIn(1000)
+        // });
+
+    // hum fadeIn fadeOut ek buttton se kar skte hai 
+    // or vo hai fadToggle
+    // $('#btn1').click(function(){
+    //     $('#div1').fadeToggle(1000)
+    // }) 
+
+    // slideUp and slideDown
+    // agr hum slideToggle use karenge to ek he button se do kaam honge
+    // $("#btn1").click(function(){
+    //     $("#div1").slideUp(1000)
+    // });
+    // $("#btn2").click(function(){
+    //     $("#div1").slideDown(1000)
+    // })
+
+
+    // Animation
+    // $('#btn1').click(function(){
+    //     $('#div1').animate({
+    //         height:'400px',
+    //         opacity:'90%',
+    //         width:'50%'
+    //     },2000) // time
+    // })
+    // $('#btn2').click(function(){
+    //     $('#div1').stop()
+    // })
+
+
+    // callBack function
+    // effect ke parameter me as an argument function paas krna its called argument 
+    // ex-
+    // $('#btn1').click(function(){
+    //     $('#div1').hide(1000,function(){
+    //         alert('div is hiddend,Reload the page')
+    //     })
+    // })
+
+    // chaining-ek element par multiple effect use karna
+    // sirf . use karo or effect laga do 
+    // $('#btn1').click(function(){
+    //     $('#div1').css('background-color','black').slideUp(2000).slideDown(1000)
+    // })
+
+
+
+       
+    
+    </script>
+</body>
+</html>

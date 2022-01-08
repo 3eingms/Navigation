@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+        header{
+            height: 90px;
+            background-color: #2f3640;
+        }
+        .inner-width{
+            max-width: 1000px;
+            padding: 0 10px;
+            margin: auto;
+        }      
+        .logo{
+            float: left;
+            padding: 20px 0;
+        } 
+        .logo img{
+            height: 50px;
+        }      
+        .navigation-menu{
+            float: right;
+            display: flex;
+            align-items: center;
+            min-height: 90px;
+        }   
+        .navigation-menu a{
+            margin-left: 10px;
+            color: #ddd;
+            font-size: 18px;
+            padding: 12px 20px;
+            border-radius: 4px;
+            transition: .4s linear;
+        }       
+        .navigation-menu a:hover{
+            background-color: #fff;
+            color:#2f3640;
+            transform: scale(1.1);
+        }
+        .navigation-menu i{
+            margin-right: 8px;
+            font-size: 16px;
+        }
+        .home{
+            color: #ff6b6b;
+        }
+        .about{
+            color: #0abde3;
+        }
+        .works{
+            color: #feca57;
+        }
+        .contact{
+            color: #5f27cd;
+        }
+        .menu-toggle-btn{
+            float: right;
+            height: 90px;
+            line-height: 90px;
+            color: #fff;
+            font-size: 26px;
+            display: none;
+            cursor: pointer;
+        }
+        @media screen and (max-width:700px) {
+            .menu-toggle-btn{
+                display: block !important;
+            }
+            .navigation-menu{
+                position: fixed;
+                width: 100%;
+                max-width: 400px;
+                background: #172d4d;
+                top: 90px;
+                right: 0;
+                display: none;
+                padding: 20px 40px;
+               
+            }
+            .navigation-menu a{
+                display: block;
+                margin: 10px 0;
+            }
+            .navigation-menu::before{
+                content: "";
+                border-left: 10px solid transparent;
+                border-right: 10px solid transparent;
+                border-bottom: 10px solid #172d4d;
+                position: absolute;
+                top: -10px;
+                right: 10px;
+            }
+            .navigation-menu.active{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="inner-width">
+            <a href="#" class="logo"><img src="../turned-on.png" alt=""></a>
+            <i class="menu-toggle-btn fas fa-bars"></i>
+            <nav class="navigation-menu">
+                <a href="#"><i class="fas fa-home home"></i> Home</a>
+                <a href="#"><i class="fas fa-align-left about"></i> About</a>
+                <a href="#"><i  class="fab fa-buffer works""></i> Work</a>
+                <a href="#"><i class="fas fa-headset contact"></i> Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        $('document').ready(function(){
+            $('.menu-toggle-btn').click(function(){
+                $(this).toggleClass('fa-times')
+                $('.navigation-menu').toggleClass('active')
+            })
+        })
+    </script>
+</body>
+</html>

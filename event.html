@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event in Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        p {
+            background-color: brown;
+            width: 100px;
+            height: 100px;
+            color: white;
+        }
+        div{
+            background-color: thistle;
+            width: 100px;
+            height: 100px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Events</h2>
+   
+    <p id="para">This is P tag</p>
+    <br>
+    <button id="btn">Click</button>
+
+    <div id="div1"></div>
+
+    <h1 id="ready"></h1>
+    <script>
+        // click events
+        // click() - on click event fire
+        // dblclick()- on double click event wil be fire
+
+
+        $("#btn").click(function () {
+            $(this).hide()  // this means jo selected uske sare chize us par apply hongi
+                            // in case yaha button selected hai to usko hide karega 
+        });
+
+
+        // mouse event-
+        // mouseenter()
+        // mouseleave()
+        // mouseup()
+        // mouseout()
+        // mouseover()
+        // $("#div1").mouseenter(function(){
+        //     $("#para").hide()
+        // })
+
+        // mouseenter or mouseleve in dono ko milakar ek function bana hai "hover"
+        // this hover function aceept only two function
+        // $("#div1").hover(function(){
+        //     $("#para").hide()
+        // },
+        // function(){
+        //     $("#para").show()
+        // })
+
+        // on() function in event 
+        // we apply multple event on single element
+        // ex-
+        $('#div1').on({
+            click:function(){
+                $(this).css('background-color','red')
+            },
+            mouseenter:function(){
+                $(this).css('background-color','green')
+            },
+            mouseleave:function(){
+                $(this).css('background-color','blue')
+            }
+        })
+        $(document).ready(function(){
+            $('#ready').text('ready to rock').css('color','green').css('background-color','black') 
+        })
+        
+    </script>
+</body>
+
+</html>

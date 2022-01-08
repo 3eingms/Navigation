@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        .demo{
+            background-color: cornflowerblue;
+            height: 100px;
+            width: 100px;
+        }
+        .newDemo{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- how to add a elemnt -->
+
+    <!-- before -->
+    <ul id="list">
+        <!-- prepend -->
+        <li>red</li>
+        <li>blue</li>
+        <li>green</li>
+        <!-- append  -->
+    </ul>
+    <!-- after -->  
+
+    <div id="demo" class="demo"></div>
+    <button id="btn" class="btn">click</button>
+    <script>
+        $('#list').append('<li>yellow</li>') // last me add honga
+        $('#list').prepend('<li>white</li>')  // index 1 par add honga (on top)
+        $('#list').after('<li>white</li>')  // container ke baad add honga
+        $('#list').before('<li>white</li>')  // container ke phele add honga
+
+
+        // adding new class by script (we add multiple classes)
+        // $('#btn').click(function(){
+        //     $('#demo').addClass('newDemo')
+        // })
+
+        // remove class
+        // $('#btn').click(function(){
+        //     $('#demo').removeClass('demo')
+        // })
+
+        // toggleClass() - using we remove or add class in one click
+    </script>
+</body>
+</html>

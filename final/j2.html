@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        #myDiv{
+            background-color: blanchedalmond;
+            text-align: center;
+            padding: 30px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- hide and show -->
+    <button>Try it</button>
+    <div id="myDiv">this is jquery code</div>
+
+    <input type="text">
+    <span id="focusid">Your in focus..</span>
+    <span id="blurid">Now you focus out</span>
+
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat non vel fugit adipisci corrupti consectetur, maxime provident quod delectus mollitia?</p>
+
+    <h4>Mudassir</h4>
+    <script>
+        // mouse event 
+        // 1. click
+        // 2 .dblclick
+        // 3 . mouseenter
+        // 4 . mouseleave
+
+        // KeyBoard Events
+        // 1 . keypress
+        // 2 . keydown
+        // 3 . keyup
+
+        // forms event 
+        // 1 . submit
+        // 2 . change
+        // 3 . focus = kis cheez par focus krna
+        // 4 . blur - focus out 
+
+        // window/document Event
+        // 1. load
+        // 2 . resize
+        // 3 . scroll
+        // 4 . unload
+
+        $(document).ready(function(){
+            $('button').click(function(){
+                $('#myDiv').toggle(2000) // toggle is usefor hide and show
+            })
+            // $('input').keydown(function(){
+            //     alert('keyboard event is fire')
+            // })
+
+            $('span').hide()
+            $('input').focus(()=>{
+                $('#focusid').show().fadeOut(4000)
+            })
+            $('input').blur(()=>{
+                $('#blurid').show().fadeOut(4000)
+            })
+           
+            $('p').on({
+                mouseenter:function(){
+                    $(this).css('backgroundColor','red')
+                },
+                mouseleave:function(){
+                    $(this).css('backgroundColor','yellow')
+                },
+                click:function(){
+                    $(this).css('padding','20px')
+                }
+            })
+
+            $('h4').click(function(){
+                $(this).append('<h4>Web Developer</h4>')
+                $(this).append('<h4>Photographer</h4>')
+            })
+        })
+    </script>
+</body>
+</html>
